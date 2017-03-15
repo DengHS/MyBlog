@@ -1,15 +1,16 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>xyz.denghs</groupId>
-    <artifactId>blog-base</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <groupId>xyz.denghs</groupId>
-  <artifactId>blog-protal</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
-  	<dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>xyz.denghs</groupId>
+		<artifactId>blog-base</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>xyz.denghs</groupId>
+	<artifactId>blog-protal</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<dependencies>
 		<!-- 单元测试 -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -102,7 +103,7 @@
 			</plugin>
 		</plugins>
 		<!-- 如果不添加此节点mybatis的mapper.xml文件都会被漏掉。 -->
-	<resources>
+		<resources>
 			<resource>
 				<directory>src/main/java</directory>
 				<includes>

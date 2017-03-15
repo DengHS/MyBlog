@@ -9,14 +9,14 @@
 
 	<context:annotation-config />
 
-	<context:component-scan base-package="com.taotao.controller">
+	<context:component-scan base-package="xyz.denghs.controller">
 		<context:include-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
 
 	<mvc:annotation-driven />
 
-	<mvc:resources location="/WEB-INF/html/" mapping="/**" />
+	<mvc:resources location="/WEB-INF/resources/" mapping="/resources/**" />
 
 	<!-- 配置ViewResolver。 可以用多个ViewResolver。 使用order属性排序。 InternalResourceViewResolver放在最后。 -->
 	<bean
