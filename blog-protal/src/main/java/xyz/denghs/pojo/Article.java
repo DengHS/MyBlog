@@ -9,6 +9,8 @@ public class Article {
 
     private String type;
 
+    private String summary;
+
     private String content;
 
     private String image;
@@ -41,6 +43,14 @@ public class Article {
 
     public void setType(String type) {
         this.type = type == null ? null : type.trim();
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary == null ? null : summary.trim();
     }
 
     public String getContent() {

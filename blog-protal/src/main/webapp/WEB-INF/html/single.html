@@ -82,56 +82,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 blog-main">
-					<article class="blog-post">
-						<header>
 
-							<div class="lead-image">
-								<img src="img/single-post.jpg" alt="" class="img-responsive">
-
-							</div>
-						</header>
-						<div class="body">
-							<h1>Responsive HTML5 Template</h1>
-							<div class="meta">
-								<i class="fa fa-user"></i> John Doe <i class="fa fa-calendar"></i>23
-								Agustus 2015<i class="fa fa-comments"></i><span class="data"><a
-									href="#comments">3 Comments</a></span>
-							</div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								Autem quas voluptatem et minima quo amet ducimus. Voluptatum
-								soluta tenetur ducimus fugiat, sint voluptate eveniet adipisci
-								nulla asperiores distinctio laudantium eos. Lorem ipsum dolor
-								sit amet, consectetur adipisicing elit. Provident tenetur,
-								consectetur dolores nostrum, numquam facere a dicta eum nam
-								suscipit consequuntur dolorem aspernatur molestias vero quo id
-								tempore vel possimus.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								Autem quas voluptatem et minima quo amet ducimus. Voluptatum
-								soluta tenetur ducimus fugiat, sint voluptate eveniet adipisci
-								nulla asperiores distinctio laudantium eos. Lorem ipsum dolor
-								sit amet, consectetur adipisicing elit. Provident tenetur,
-								consectetur dolores nostrum, numquam facere a dicta eum nam
-								suscipit consequuntur dolorem aspernatur molestias vero quo id
-								tempore vel possimus.</p>
-
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								Autem quas voluptatem et minima quo amet ducimus. Voluptatum
-								soluta tenetur ducimus fugiat, sint voluptate eveniet adipisci
-								nulla asperiores distinctio laudantium eos. Lorem ipsum dolor
-								sit amet, consectetur adipisicing elit. Provident tenetur,
-								consectetur dolores nostrum, numquam facere a dicta eum nam
-								suscipit consequuntur dolorem aspernatur molestias vero quo id
-								tempore vel possimus.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								Autem quas voluptatem et minima quo amet ducimus. Voluptatum
-								soluta tenetur ducimus fugiat, sint voluptate eveniet adipisci
-								nulla asperiores.</p>
-
-						</div>
-					</article>
 
 					<aside class="social-icons clearfix">
 						<h3>Share on</h3>
@@ -366,6 +317,24 @@
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/modernizr.js"></script>
-
+	<script type="text/javascript">
+		$(function() {
+			$.ajax({
+	             type: "GET",
+	             url: "/articledetail?id=" + GetQueryString("id"),
+	             success: function(data){
+	            	$('.blog-main').prepend(data);
+	             }
+	         });
+			
+		});
+		
+		function GetQueryString(name)
+		{
+		     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		     var r = window.location.search.substr(1).match(reg);
+		     if(r!=null)return  unescape(r[2]); return null;
+		}
+	</script>
 </body>
 </html>
