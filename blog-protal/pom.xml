@@ -90,9 +90,13 @@
 			<artifactId>druid</artifactId>
 		</dependency>
 		<dependency>
-				<groupId>joda-time</groupId>
-				<artifactId>joda-time</artifactId>
-			</dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>cn.songxinqiang</groupId>
+			<artifactId>com.baidu.ueditor</artifactId>
+		</dependency>
 	</dependencies>
 	<build>
 		<!-- 配置插件 -->
