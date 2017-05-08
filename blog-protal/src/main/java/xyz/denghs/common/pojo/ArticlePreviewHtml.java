@@ -26,7 +26,7 @@ public class ArticlePreviewHtml {
 				"		</header>\n" +
 				"		<div class=\"body\">" + article.getSummary() + "</div>\n" +
 				"		<div class=\"clearfix\">\n" +
-				"			<a href=\"single.html?id=" + article.getId() + "\" class=\"btn btn-clean-one\">Read more</a>\n" +
+				"			<a href=\"/portal/single.html?id=" + article.getId() + "\" class=\"btn btn-clean-one\">Read more</a>\n" +
 				"		</div>\n" +
 				"	</article>\n" +
 				"</div>\n";
