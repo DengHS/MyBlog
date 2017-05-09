@@ -182,10 +182,10 @@
 				<version>${solrj.version}</version>
 			</dependency>
 			<dependency>
-			<groupId>cn.songxinqiang</groupId>
-			<artifactId>com.baidu.ueditor</artifactId>
-			<version>${ueditor.version}</version>
-		</dependency>
+				<groupId>cn.songxinqiang</groupId>
+				<artifactId>com.baidu.ueditor</artifactId>
+				<version>${ueditor.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
